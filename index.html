@@ -205,7 +205,32 @@
 
       <div class="project-grid">
 
-        <!-- Project 1 -->
+        <!-- Project 1: e-Nyayalaya (Flagship Project) -->
+        <article class="project-card" data-project="enyayalaya" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for e-Nyayalaya">
+          <div class="project-card-top">
+            <span class="project-category">Full Stack · Cryptography · LegalTech</span>
+            <span class="status-badge status-progress" style="background: rgba(221, 168, 83, 0.15); color: #DDA853; border: 1px solid rgba(221, 168, 83, 0.3);">Featured • SIH 2026</span>
+          </div>
+          <h3 class="project-title">e-Nyayalaya — Unified Digital Evidence &amp; Case Docketing Grid</h3>
+          <p class="project-desc">
+            Next-generation zero-trust judicial platform unifying Citizens, 1,900+ Police Stations, Trial Courts, High Courts, Supreme Court, and CBI/NIA. Implements client-side SHA-256 recursive hash chaining, Google Gemini Vision OCR, and automated Section 193 BNSS Charge Sheet compilation.
+          </p>
+          <ul class="tech-tags">
+            <li>React 19</li>
+            <li>Supabase PostgreSQL</li>
+            <li>Row-Level Security (RLS)</li>
+            <li>SHA-256 Web Crypto API</li>
+            <li>Google Gemini Vision</li>
+            <li>BNSS &amp; BSA 2023</li>
+          </ul>
+          <p class="responsible-note">Role: Team Lead &amp; Chief Architect · 100% compliant with Sec 63 BSA 2023 &amp; Aadhaar Act 2016.</p>
+          <div class="project-actions">
+            <a href="https://github.com/TheGhostHacker-Ai/e-Nyayalaya" class="btn btn-small" target="_blank" rel="noopener" onclick="event.stopPropagation()">GitHub</a>
+            <button class="btn btn-small btn-ghost" data-open-project="enyayalaya">Details</button>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
         <article class="project-card" data-project="scanner" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Website Vulnerability Scanner">
           <div class="project-card-top">
             <span class="project-category">Cybersecurity · Python</span>
@@ -410,44 +435,46 @@
   <div class="modal">
     <button class="modal-close" id="modal-close" aria-label="Close details">×</button>
 
-    <p class="eyebrow">Project Detail</p>
-    <h3 id="modal-title">Website Vulnerability Scanner</h3>
+    <p class="eyebrow" id="modal-eyebrow">Project Detail</p>
+    <h3 id="modal-title">e-Nyayalaya — Unified Digital Evidence &amp; Case Docketing Grid</h3>
 
     <div class="modal-section">
       <h4>Overview</h4>
-      <p>A Python-based tool for scanning websites the user is authorized to test, aimed at identifying common, well-understood security issues rather than performing comprehensive penetration testing.</p>
+      <p id="modal-overview">A next-generation zero-trust judicial case management and electronic evidence infrastructure bridging Citizens, 1,900+ Police Stations, Trial Courts, High Courts, Supreme Court, and Central Enforcement Agencies (CBI/NIA/ED).</p>
     </div>
 
     <div class="modal-section">
       <h4>Objective</h4>
-      <p>Built as a hands-on way to learn how automated security checks work in practice — moving from reading about vulnerabilities to writing code that actually looks for them.</p>
+      <p id="modal-objective">Built natively to fulfill the statutory mandates of India's New Criminal Laws (BNSS &amp; BSA 2023), eliminating physical file transit delays, paper case diary doctoring, and inter-agency jurisdictional silos.</p>
     </div>
 
     <div class="modal-section">
-      <h4>Technical Approach</h4>
-      <p>The scanner sends HTTP/HTTPS requests to a target URL and inspects the responses — headers, status codes and page content — for indicators of common misconfigurations, then reports findings in a structured, readable format.</p>
+      <h4>Technical Approach &amp; Architecture</h4>
+      <p id="modal-approach">Features a 4-tier linear judicial hierarchy with specialized agency transfer dispatch. Employs client-side SHA-256 Web Crypto API hashing, recursive block chaining (PreviousHash_{i-1}) for court admissibility under Sec 63 BSA 2023, Google Gemini Vision OCR, and PostgreSQL Row-Level Security.</p>
     </div>
 
     <div class="modal-section">
-      <h4>Features</h4>
-      <ul>
-        <li>HTTP/HTTPS request-based scanning of a target URL</li>
-        <li>Basic security header and configuration checks</li>
-        <li>Structured output of findings</li>
+      <h4>Key Features &amp; Impact</h4>
+      <ul id="modal-features">
+        <li>Instant Zero FIR territorial handover under Sec 173(1) BNSS in &lt; 30 seconds</li>
+        <li>Automated Sec 193 BNSS Final Charge Sheet generation via Gemini Vision AI</li>
+        <li>Mathematically tamper-evident chained audit ledger under Sec 63 BSA 2023</li>
+        <li>Single-Use Master Transfer Tokens (TRF-CBI-XXXX) for cryptographic custody handover</li>
+        <li>100% Aadhaar Act 2016 UIDAI 4-digit masking (XXXX-XXXX-1234)</li>
       </ul>
     </div>
 
     <div class="modal-section">
       <h4>Technologies</h4>
-      <p>Python, HTTP/HTTPS</p>
+      <p id="modal-tech">React 19, Vite 8, Supabase PostgreSQL 15, Row-Level Security (RLS), SHA-256 Web Crypto API, Google Gemini Multimodal Vision, Netlify CI/CD, GIGW 3.0</p>
     </div>
 
     <div class="modal-section modal-responsible">
-      <h4>Responsible Use</h4>
-      <p>This tool is intended for authorized security testing and educational purposes only. Only scan systems you own or have explicit permission to test.</p>
+      <h4 id="modal-compliance-title">Compliance &amp; Standards</h4>
+      <p id="modal-compliance-desc">Fully compliant with the Bharatiya Nagarik Suraksha Sanhita (BNSS 2023), Bharatiya Sakshya Adhiniyam (BSA 2023), Aadhaar Act 2016, and Supreme Court e-Courts Phase III / ICJS architecture.</p>
     </div>
 
-    <a href="https://github.com/TheGhostHacker-Ai/Website-vulnerability-scanner" class="btn btn-primary" target="_blank" rel="noopener">View Repository</a>
+    <a href="https://github.com/TheGhostHacker-Ai/e-Nyayalaya" id="modal-repo-link" class="btn btn-primary" target="_blank" rel="noopener">View Repository</a>
   </div>
 </div>
 

@@ -50,8 +50,73 @@ const modal = document.getElementById('project-modal');
 const modalClose = document.getElementById('modal-close');
 let lastFocusedEl = null;
 
-const openModal = (triggerEl) => {
+const PROJECTS_DATA = {
+  enyayalaya: {
+    title: 'e-Nyayalaya — Unified Digital Evidence & Case Docketing Grid',
+    overview: 'A next-generation zero-trust judicial case management and electronic evidence infrastructure bridging Citizens, 1,900+ Police Stations, Trial Courts, High Courts, Supreme Court, and Central Enforcement Agencies (CBI/NIA/ED).',
+    objective: "Built natively to fulfill the statutory mandates of India's New Criminal Laws (BNSS & BSA 2023), eliminating physical file transit delays, paper case diary doctoring, and inter-agency jurisdictional silos.",
+    approach: 'Features a 4-tier linear judicial hierarchy with specialized agency transfer dispatch. Employs client-side SHA-256 Web Crypto API hashing, recursive block chaining (PreviousHash_{i-1}) for court admissibility under Sec 63 BSA 2023, Google Gemini Vision OCR, and PostgreSQL Row-Level Security.',
+    features: [
+      'Instant Zero FIR territorial handover under Sec 173(1) BNSS in < 30 seconds',
+      'Automated Sec 193 BNSS Final Charge Sheet generation via Gemini Vision AI',
+      'Mathematically tamper-evident chained audit ledger under Sec 63 BSA 2023',
+      'Single-Use Master Transfer Tokens (TRF-CBI-XXXX) for cryptographic custody handover',
+      '100% Aadhaar Act 2016 UIDAI 4-digit masking (XXXX-XXXX-1234)'
+    ],
+    technologies: 'React 19, Vite 8, Supabase PostgreSQL 15, Row-Level Security (RLS), SHA-256 Web Crypto API, Google Gemini Multimodal Vision, Netlify CI/CD, GIGW 3.0',
+    complianceTitle: 'Compliance & Standards',
+    complianceDesc: 'Fully compliant with the Bharatiya Nagarik Suraksha Sanhita (BNSS 2023), Bharatiya Sakshya Adhiniyam (BSA 2023), Aadhaar Act 2016, and Supreme Court e-Courts Phase III / ICJS architecture.',
+    repoUrl: 'https://github.com/TheGhostHacker-Ai/e-Nyayalaya'
+  },
+  scanner: {
+    title: 'Website Vulnerability Scanner',
+    overview: 'A Python-based tool for scanning websites the user is authorized to test, aimed at identifying common, well-understood security issues rather than performing comprehensive penetration testing.',
+    objective: 'Built as a hands-on way to learn how automated security checks work in practice — moving from reading about vulnerabilities to writing code that actually looks for them.',
+    approach: 'The scanner sends HTTP/HTTPS requests to a target URL and inspects the responses — headers, status codes and page content — for indicators of common misconfigurations, then reports findings in a structured, readable format.',
+    features: [
+      'HTTP/HTTPS request-based scanning of a target URL',
+      'Basic security header and configuration checks',
+      'Structured output of findings'
+    ],
+    technologies: 'Python, HTTP/HTTPS, Security Assessment Tools',
+    complianceTitle: 'Responsible Use',
+    complianceDesc: 'This tool is intended for authorized security testing and educational purposes only. Only scan systems you own or have explicit permission to test.',
+    repoUrl: 'https://github.com/TheGhostHacker-Ai/Website-vulnerability-scanner'
+  }
+};
+
+const openModal = (triggerEl, projectKey = 'enyayalaya') => {
   lastFocusedEl = triggerEl;
+  const data = PROJECTS_DATA[projectKey] || PROJECTS_DATA.enyayalaya;
+
+  const titleEl = document.getElementById('modal-title');
+  const overviewEl = document.getElementById('modal-overview');
+  const objectiveEl = document.getElementById('modal-objective');
+  const approachEl = document.getElementById('modal-approach');
+  const featuresEl = document.getElementById('modal-features');
+  const techEl = document.getElementById('modal-tech');
+  const compTitleEl = document.getElementById('modal-compliance-title');
+  const compDescEl = document.getElementById('modal-compliance-desc');
+  const repoLinkEl = document.getElementById('modal-repo-link');
+
+  if (titleEl) titleEl.textContent = data.title;
+  if (overviewEl) overviewEl.textContent = data.overview;
+  if (objectiveEl) objectiveEl.textContent = data.objective;
+  if (approachEl) approachEl.textContent = data.approach;
+  if (techEl) techEl.textContent = data.technologies;
+  if (compTitleEl) compTitleEl.textContent = data.complianceTitle;
+  if (compDescEl) compDescEl.textContent = data.complianceDesc;
+  if (repoLinkEl) repoLinkEl.href = data.repoUrl;
+
+  if (featuresEl) {
+    featuresEl.innerHTML = '';
+    data.features.forEach((feat) => {
+      const li = document.createElement('li');
+      li.textContent = feat;
+      featuresEl.appendChild(li);
+    });
+  }
+
   modal.hidden = false;
   modalClose.focus();
   document.body.style.overflow = 'hidden';
@@ -66,12 +131,14 @@ const closeModal = () => {
 document.querySelectorAll('[data-open-project], [data-project]').forEach((el) => {
   el.addEventListener('click', (e) => {
     if (e.target.closest('a')) return; // let GitHub link work normally
-    openModal(el);
+    const projectKey = el.getAttribute('data-open-project') || el.getAttribute('data-project');
+    openModal(el, projectKey);
   });
   el.addEventListener('keydown', (e) => {
     if ((e.key === 'Enter' || e.key === ' ') && el.hasAttribute('data-project')) {
       e.preventDefault();
-      openModal(el);
+      const projectKey = el.getAttribute('data-project');
+      openModal(el, projectKey);
     }
   });
 });
