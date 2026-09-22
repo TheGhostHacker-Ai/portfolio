@@ -1,25 +1,27 @@
 // ============================================================
-// Mobile nav toggle
+// MOBILE NAVIGATION TOGGLE
 // ============================================================
 const navToggle = document.getElementById('nav-toggle');
 const mobileNav = document.getElementById('mobile-nav');
 
-navToggle.addEventListener('click', () => {
-  const isOpen = mobileNav.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(isOpen));
-  navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-});
-
-document.querySelectorAll('#mobile-nav a').forEach((link) => {
-  link.addEventListener('click', () => {
-    mobileNav.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-    navToggle.setAttribute('aria-label', 'Open menu');
+if (navToggle && mobileNav) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
   });
-});
+
+  document.querySelectorAll('#mobile-nav a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+    });
+  });
+}
 
 // ============================================================
-// Active section indicator
+// ACTIVE SECTION INDICATOR ON SCROLL
 // ============================================================
 const sections = document.querySelectorAll('main section[id]');
 const navLinks = document.querySelectorAll('[data-nav]');
@@ -31,20 +33,67 @@ const setActive = (id) => {
   });
 };
 
-if ('IntersectionObserver' in window) {
+if ('IntersectionObserver' in window && sections.length > 0) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) setActive(entry.target.id);
       });
     },
-    { rootMargin: '-40% 0px -50% 0px', threshold: 0 }
+    { rootMargin: '-30% 0px -50% 0px', threshold: 0 }
   );
   sections.forEach((section) => observer.observe(section));
 }
 
 // ============================================================
-// Project detail modal
+// TERMINAL TYPING ANIMATION
+// ============================================================
+const typingElement = document.getElementById('typing-text');
+const phrases = [
+  'Cybersecurity & AI Enthusiast | BTech CSE',
+  'Digital Forensics & Cryptographic Security',
+  'Chief Architect @ e-Nyayalaya (SIH 2026)',
+  'Full-Stack Developer & Vulnerability Analyst'
+];
+
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typeSpeed = 70;
+
+function typeWriter() {
+  if (!typingElement) return;
+
+  const currentPhrase = phrases[phraseIndex];
+
+  if (isDeleting) {
+    typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+    charIndex--;
+    typeSpeed = 35;
+  } else {
+    typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+    charIndex++;
+    typeSpeed = 75;
+  }
+
+  if (!isDeleting && charIndex === currentPhrase.length) {
+    isDeleting = true;
+    typeSpeed = 2200; // Pause at end of sentence
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    phraseIndex = (phraseIndex + 1) % phrases.length;
+    typeSpeed = 500; // Pause before typing next phrase
+  }
+
+  setTimeout(typeWriter, typeSpeed);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(typeWriter, 500);
+});
+
+// ============================================================
+// PROJECT DATA & MODAL SYSTEM
 // ============================================================
 const modal = document.getElementById('project-modal');
 const modalClose = document.getElementById('modal-close');
@@ -69,24 +118,8 @@ const PROJECTS_DATA = {
     repoUrl: 'https://github.com/TheGhostHacker-Ai/e-Nyayalaya',
     demoUrl: 'https://e-nyayalaya.netlify.app/'
   },
-  scanner: {
-    title: 'Website Vulnerability Scanner',
-    overview: 'A Python-based tool for scanning websites the user is authorized to test, aimed at identifying common, well-understood security issues rather than performing comprehensive penetration testing.',
-    objective: 'Built as a hands-on way to learn how automated security checks work in practice — moving from reading about vulnerabilities to writing code that actually looks for them.',
-    approach: 'The scanner sends HTTP/HTTPS requests to a target URL and inspects the responses — headers, status codes and page content — for indicators of common misconfigurations, then reports findings in a structured, readable format.',
-    features: [
-      'HTTP/HTTPS request-based scanning of a target URL',
-      'Basic security header and configuration checks',
-      'Structured output of findings'
-    ],
-    technologies: 'Python, HTTP/HTTPS, Security Assessment Tools',
-    complianceTitle: 'Responsible Use',
-    complianceDesc: 'This tool is intended for authorized security testing and educational purposes only. Only scan systems you own or have explicit permission to test.',
-    repoUrl: 'https://github.com/TheGhostHacker-Ai/Website-vulnerability-scanner',
-    demoUrl: null
-  },
   sehatsaathi: {
-    title: 'SehatSaathi — AI-Enabled Healthcare Application',
+    title: 'SehatSaathi — AI-Enabled Healthcare Platform',
     overview: 'An AI-assisted healthcare platform built to improve medical accessibility, multilingual patient interactions, and symptom analysis with a user-centric design.',
     objective: 'Developed for the Smart India Hackathon to bridge the gap between patients and primary healthcare information through intelligent AI assistance.',
     approach: 'Integrates responsive frontend interfaces with AI/ML diagnostic APIs and clean medical workflow routing, enabling patients to describe symptoms and receive structured health guidance.',
@@ -101,6 +134,22 @@ const PROJECTS_DATA = {
     complianceDesc: 'Developed for Smart India Hackathon innovation challenges focused on accessible digital healthcare in India.',
     repoUrl: 'https://github.com/TheGhostHacker-Ai',
     demoUrl: 'https://sehatsaathii.netlify.app/'
+  },
+  scanner: {
+    title: 'Website Vulnerability Scanner',
+    overview: 'A Python-based tool for scanning websites the user is authorized to test, aimed at identifying common, well-understood security issues rather than performing comprehensive penetration testing.',
+    objective: 'Built as a hands-on way to learn how automated security checks work in practice — moving from reading about vulnerabilities to writing code that actually looks for them.',
+    approach: 'The scanner sends HTTP/HTTPS requests to a target URL and inspects the responses — headers, status codes and page content — for indicators of common misconfigurations, then reports findings in a structured, readable format.',
+    features: [
+      'HTTP/HTTPS request-based scanning of a target URL',
+      'Basic security header and configuration checks (HSTS, CSP, X-Frame-Options)',
+      'Structured output of findings and vulnerability scoring'
+    ],
+    technologies: 'Python, HTTP/HTTPS, Socket Programming, Security Assessment Tools',
+    complianceTitle: 'Responsible Use',
+    complianceDesc: 'This tool is intended for authorized security testing and educational purposes only. Only scan systems you own or have explicit permission to test.',
+    repoUrl: 'https://github.com/TheGhostHacker-Ai/Website-vulnerability-scanner',
+    demoUrl: null
   },
   rudrax: {
     title: 'RudraX — AI Home Assistant',
@@ -143,7 +192,15 @@ const openModal = (triggerEl, projectKey = 'enyayalaya') => {
   if (techEl) techEl.textContent = data.technologies;
   if (compTitleEl) compTitleEl.textContent = data.complianceTitle;
   if (compDescEl) compDescEl.textContent = data.complianceDesc;
-  if (repoLinkEl) repoLinkEl.href = data.repoUrl;
+
+  if (repoLinkEl) {
+    if (data.repoUrl) {
+      repoLinkEl.href = data.repoUrl;
+      repoLinkEl.style.display = 'inline-flex';
+    } else {
+      repoLinkEl.style.display = 'none';
+    }
+  }
 
   if (demoLinkEl) {
     if (data.demoUrl) {
@@ -163,20 +220,24 @@ const openModal = (triggerEl, projectKey = 'enyayalaya') => {
     });
   }
 
-  modal.hidden = false;
-  modalClose.focus();
-  document.body.style.overflow = 'hidden';
+  if (modal) {
+    modal.hidden = false;
+    if (modalClose) modalClose.focus();
+    document.body.style.overflow = 'hidden';
+  }
 };
 
 const closeModal = () => {
-  modal.hidden = true;
-  document.body.style.overflow = '';
-  if (lastFocusedEl) lastFocusedEl.focus();
+  if (modal) {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocusedEl) lastFocusedEl.focus();
+  }
 };
 
 document.querySelectorAll('[data-open-project], [data-project]').forEach((el) => {
   el.addEventListener('click', (e) => {
-    if (e.target.closest('a')) return; // let GitHub link work normally
+    if (e.target.closest('a')) return; // let links work normally
     const projectKey = el.getAttribute('data-open-project') || el.getAttribute('data-project');
     openModal(el, projectKey);
   });
@@ -189,62 +250,37 @@ document.querySelectorAll('[data-open-project], [data-project]').forEach((el) =>
   });
 });
 
-modalClose.addEventListener('click', closeModal);
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) closeModal();
-});
+if (modalClose) modalClose.addEventListener('click', closeModal);
+if (modal) {
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+}
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && !modal.hidden) closeModal();
+  if (e.key === 'Escape' && modal && !modal.hidden) closeModal();
 });
 
 // ============================================================
-// GitHub repositories (graceful failure)
+// CONTACT FORM SUBMISSION HANDLER
 // ============================================================
-const repoContainer = document.getElementById('github-repos');
-const repoStatus = document.getElementById('repo-status');
-const GITHUB_USER = 'TheGhostHacker-Ai';
+const contactForm = document.getElementById('contact-form');
+const formFeedback = document.getElementById('form-feedback');
 
-async function loadRepos() {
-  try {
-    const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=6`);
-    if (!res.ok) throw new Error('GitHub API request failed');
-    const repos = await res.json();
+if (contactForm && formFeedback) {
+  contactForm.addEventListener('submit', (e) => {
+    const name = document.getElementById('form-name')?.value;
+    const email = document.getElementById('form-email')?.value;
+    const subject = document.getElementById('form-subject')?.value;
+    const message = document.getElementById('form-message')?.value;
 
-    if (!Array.isArray(repos) || repos.length === 0) {
-      repoStatus.textContent = 'No public repositories to show right now.';
+    if (!name || !email || !message) {
+      e.preventDefault();
+      formFeedback.textContent = 'Please fill out all required fields.';
+      formFeedback.className = 'form-feedback error';
       return;
     }
 
-    repoStatus.remove();
-
-    repos
-      .filter((r) => !r.fork)
-      .forEach((repo) => {
-        const card = document.createElement('a');
-        card.className = 'repo-card';
-        card.href = repo.html_url;
-        card.target = '_blank';
-        card.rel = 'noopener';
-
-        const title = document.createElement('h4');
-        title.textContent = repo.name;
-
-        const desc = document.createElement('p');
-        desc.textContent = repo.description || 'No description provided.';
-
-        const meta = document.createElement('div');
-        meta.className = 'repo-meta';
-        meta.innerHTML = `
-          <span>${repo.language || '—'}</span>
-          <span>★ ${repo.stargazers_count}</span>
-        `;
-
-        card.append(title, desc, meta);
-        repoContainer.appendChild(card);
-      });
-  } catch (err) {
-    repoStatus.textContent = 'GitHub repositories could not be loaded right now — view the profile directly below.';
-  }
+    formFeedback.textContent = 'Preparing email client with your message...';
+    formFeedback.className = 'form-feedback success';
+  });
 }
-
-loadRepos();

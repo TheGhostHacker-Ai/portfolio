@@ -3,51 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Narendra Kumar | Cybersecurity & Digital Forensics</title>
-<meta name="description" content="B.Tech Computer Science student focused on cybersecurity, digital forensics, network security and vulnerability assessment.">
+<title>Narendra Kumar | Cybersecurity & AI/ML Specialist</title>
+<meta name="description" content="B.Tech Computer Science student specializing in Cybersecurity, Digital Forensics, and AI/ML. Team Lead & Chief Architect of e-Nyayalaya.">
 
-<meta property="og:title" content="Narendra Kumar | Cybersecurity & Digital Forensics">
-<meta property="og:description" content="B.Tech Computer Science student focused on cybersecurity, digital forensics, network security and vulnerability assessment.">
+<meta property="og:title" content="Narendra Kumar | Cybersecurity & AI/ML Specialist">
+<meta property="og:description" content="B.Tech Computer Science student specializing in Cybersecurity, Digital Forensics, and AI/ML.">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div class="circuit-grid" aria-hidden="true"></div>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
 <!-- ============ NAV ============ -->
 <header class="site-header" id="site-header">
   <div class="header-inner">
-    <a href="#top" class="logo">Narendra Kumar</a>
+    <a href="#top" class="logo">
+      <span class="logo-bracket">&lt;</span>Narendra<span class="logo-accent">.dev</span><span class="logo-bracket">/&gt;</span>
+    </a>
 
     <nav class="primary-nav" id="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="#about" data-nav>About</a></li>
-        <li><a href="#skills" data-nav>Skills</a></li>
         <li><a href="#projects" data-nav>Projects</a></li>
         <li><a href="#certifications" data-nav>Certifications</a></li>
         <li><a href="#activities" data-nav>Activities</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
         <li><a href="#contact" data-nav>Contact</a></li>
       </ul>
     </nav>
 
-    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="header-actions">
+      <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
     <ul>
       <li><a href="#about" data-nav>About</a></li>
-      <li><a href="#skills" data-nav>Skills</a></li>
       <li><a href="#projects" data-nav>Projects</a></li>
       <li><a href="#certifications" data-nav>Certifications</a></li>
       <li><a href="#activities" data-nav>Activities</a></li>
+      <li><a href="#skills" data-nav>Skills</a></li>
       <li><a href="#contact" data-nav>Contact</a></li>
     </ul>
   </nav>
@@ -55,63 +62,92 @@
 
 <main id="main">
 
-  <!-- ============ HERO ============ -->
+  <!-- ============ 1. HERO ============ -->
   <section class="hero" id="top">
     <div class="hero-inner">
 
-      <p class="record-line" aria-hidden="true">
-        <span>RECORD</span><span class="dot">·</span><span>CSE / CYBERSECURITY</span><span class="dot">·</span><span class="pulse-dot"></span><span>STATUS: ACTIVE</span>
-      </p>
+      <div class="terminal-badge" aria-hidden="true">
+        <span class="pulse-dot"></span>
+        <span class="badge-text">STATUS: ACTIVE // CSE & CYBERSECURITY</span>
+      </div>
 
       <h1 class="hero-name">Narendra Kumar</h1>
-      <p class="hero-role">B.Tech CSE Student — Cybersecurity &amp; Digital Forensics</p>
+
+      <!-- Terminal Typing Tagline -->
+      <div class="hero-role-wrapper">
+        <span class="terminal-prompt">&gt;</span>
+        <span class="hero-role" id="typing-text">Cybersecurity &amp; AI Enthusiast | BTech CSE</span>
+        <span class="typing-cursor"></span>
+      </div>
 
       <p class="hero-intro">
-        Computer Science &amp; Engineering student focused on cybersecurity, digital forensics,
-        network security and vulnerability assessment, with hands-on experience in Python and Kali Linux.
+        Computer Science &amp; Engineering undergraduate at SVNIET (AKTU) specializing in 
+        <strong>Digital Forensics, Cryptographic Security, and AI/ML Integration</strong>. 
+        Passionate about engineering zero-trust architectures, automated vulnerability analysis, 
+        and high-impact judicial technology.
       </p>
 
       <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="resume.pdf" class="btn btn-secondary" id="resume-btn" target="_blank" rel="noopener">View Resume</a>
+        <a href="#projects" class="btn btn-primary">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6m8 14h8"/></svg>
+          Explore Projects
+        </a>
+        <a href="resume.pdf" class="btn btn-secondary" id="resume-btn" target="_blank" rel="noopener">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/></svg>
+          Download Resume
+        </a>
       </div>
 
-      <ul class="hero-links">
-        <li><a href="https://www.linkedin.com/in/narendra-kumar-083ba8314/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://github.com/TheGhostHacker-Ai" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="mailto:narendrakumarvk2017@gmail.com">Email</a></li>
-      </ul>
+      <div class="hero-socials">
+        <a href="https://github.com/TheGhostHacker-Ai" target="_blank" rel="noopener" aria-label="GitHub Profile">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/narendra-kumar-083ba8314/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="mailto:narendrakumarvk2017@gmail.com" aria-label="Send Email">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Email</span>
+        </a>
+      </div>
 
     </div>
   </section>
 
-  <!-- ============ ABOUT ============ -->
+  <!-- ============ 2. ABOUT ============ -->
   <section class="section" id="about">
     <div class="section-inner">
-      <p class="eyebrow">01 / About</p>
+      <p class="eyebrow">01 // Background &amp; Profile</p>
       <h2 class="section-title">About Me</h2>
 
       <div class="about-grid">
         <div class="about-copy">
           <p>
-            I'm a Computer Science &amp; Engineering student at Seth Vishambhar Nath Institute of
-            Engineering &amp; Technology, affiliated with AKTU, with a primary interest in cybersecurity
-            and digital forensics. My coursework and independent projects have pushed me toward network
-            security and vulnerability assessment — areas I keep coming back to because they reward
-            careful, methodical thinking as much as technical skill.
+            I'm a Computer Science &amp; Engineering undergraduate at <strong>Seth Vishambhar Nath Institute of Engineering &amp; Technology (AKTU)</strong>, specializing in cybersecurity, digital forensics, and practical AI systems.
           </p>
           <p>
-            Alongside security, I've been exploring how AI tools fit into development workflows, using
-            them to move faster on side projects while keeping cybersecurity as my primary focus. Most of
-            what I know right now comes from building things myself — running tools in Kali Linux,
-            reading documentation, and working through certifications one at a time rather than claiming
-            expertise I haven't earned yet.
+            My work focuses on the intersection of <strong>cryptographic data integrity, zero-trust backend systems, and automated security scanning</strong>. As Team Lead &amp; Chief Architect of <em>e-Nyayalaya</em> for Smart India Hackathon 2026, I engineered end-to-end judicial pipelines implementing SHA-256 recursive hash chaining under India's New Criminal Laws (BNSS &amp; BSA 2023).
           </p>
           <p>
-            I'm currently developing practical cybersecurity skills through hands-on projects,
-            structured certifications, and self-directed learning, with the goal of moving into a
-            security-focused role after graduation.
+            I combine rigorous security research in Kali Linux and vulnerability assessments with hands-on full-stack development, moving fast with modern tools while maintaining strict compliance, privacy, and code hygiene.
           </p>
+
+          <!-- Core Tech Icon Badges -->
+          <div class="tech-stack-badges">
+            <h4 class="tech-badge-title">CORE TECHNOLOGIES</h4>
+            <div class="badge-row">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Kali Linux</span>
+              <span class="tech-badge">SHA-256 Cryptography</span>
+              <span class="tech-badge">PostgreSQL / RLS</span>
+              <span class="tech-badge">React 19</span>
+              <span class="tech-badge">Generative AI / Vision</span>
+              <span class="tech-badge">Digital Forensics</span>
+              <span class="tech-badge">Network Security</span>
+            </div>
+          </div>
         </div>
 
         <dl class="about-facts">
@@ -121,183 +157,168 @@
           </div>
           <div class="fact">
             <dt>University</dt>
-            <dd>AKTU</dd>
+            <dd>Dr. A.P.J. Abdul Kalam Technical University (AKTU)</dd>
           </div>
           <div class="fact">
-            <dt>CGPA</dt>
-            <dd>8.04 / 10 <span class="fact-sub">(through 4th semester)</span></dd>
+            <dt>Academic Standing</dt>
+            <dd><span class="highlight-stat">8.04 CGPA</span> <span class="fact-sub">(through 4th semester)</span></dd>
           </div>
           <div class="fact">
-            <dt>Expected Graduation</dt>
-            <dd>2028</dd>
+            <dt>Graduation Year</dt>
+            <dd>2028 (B.Tech CSE)</dd>
           </div>
           <div class="fact">
             <dt>Location</dt>
-            <dd>Barabanki, Uttar Pradesh</dd>
+            <dd>Barabanki / Lucknow, Uttar Pradesh</dd>
           </div>
           <div class="fact">
-            <dt>Focus Areas</dt>
-            <dd>Digital Forensics, Network Security, Vulnerability Assessment</dd>
+            <dt>Specialization</dt>
+            <dd>Cybersecurity, Digital Forensics, AI/ML Engineering</dd>
           </div>
         </dl>
       </div>
     </div>
   </section>
 
-  <!-- ============ SKILLS ============ -->
-  <section class="section section-alt" id="skills">
+  <!-- ============ 3. PROJECTS ============ -->
+  <section class="section section-alt" id="projects">
     <div class="section-inner">
-      <p class="eyebrow">02 / Skills</p>
-      <h2 class="section-title">Skills</h2>
-
-      <div class="skills-grid">
-
-        <div class="skill-group">
-          <h3>Cybersecurity</h3>
-          <ul class="skill-list">
-            <li>Digital Forensics</li>
-            <li>Network Security</li>
-            <li>Endpoint Security</li>
-            <li>Ethical Hacking Fundamentals</li>
-            <li>Vulnerability Assessment</li>
-            <li>Kali Linux</li>
-            <li>Kali NetHunter</li>
-            <li>Tor &amp; Anonymity Fundamentals</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Programming</h3>
-          <ul class="skill-list">
-            <li>Python</li>
-            <li>C</li>
-            <li>HTML</li>
-            <li>MySQL</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>AI &amp; Development</h3>
-          <ul class="skill-list">
-            <li>Generative AI</li>
-            <li>Prompt Engineering</li>
-            <li>AI-assisted Development</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Systems</h3>
-          <ul class="skill-list">
-            <li>Windows</li>
-            <li>Linux</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROJECTS ============ -->
-  <section class="section" id="projects">
-    <div class="section-inner">
-      <p class="eyebrow">03 / Projects</p>
-      <h2 class="section-title">Featured Projects</h2>
+      <p class="eyebrow">02 // Featured Engineering</p>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-lead">Production-ready systems, cryptographic architectures, and security analysis tools.</p>
 
       <div class="project-grid">
 
-        <!-- Project 1: e-Nyayalaya (Flagship Project) -->
-        <article class="project-card" data-project="enyayalaya" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for e-Nyayalaya">
+        <!-- Project 1: e-Nyayalaya (Flagship) -->
+        <article class="project-card featured-project" data-project="enyayalaya" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for e-Nyayalaya">
+          <div class="card-glow"></div>
           <div class="project-card-top">
-            <span class="project-category">Full Stack · Cryptography · LegalTech</span>
-            <span class="status-badge status-progress" style="background: rgba(221, 168, 83, 0.15); color: #DDA853; border: 1px solid rgba(221, 168, 83, 0.3);">Featured • SIH 2026</span>
+            <span class="project-category">BLOCKCHAIN &bull; CYBERSECURITY &bull; LEGALTECH</span>
+            <span class="status-badge status-featured">★ SIH 2026 Flagship</span>
           </div>
-          <h3 class="project-title">e-Nyayalaya — Unified Digital Evidence &amp; Case Docketing Grid</h3>
+
+          <h3 class="project-title">e-Nyayalaya — Secure Legal Document Management &amp; Case Docketing Grid</h3>
+          
           <p class="project-desc">
-            Next-generation zero-trust judicial platform unifying Citizens, 1,900+ Police Stations, Trial Courts, High Courts, Supreme Court, and CBI/NIA. Implements client-side SHA-256 recursive hash chaining, Google Gemini Vision OCR, and automated Section 193 BNSS Charge Sheet compilation.
+            A zero-trust national judicial case management system with role-based auth, real-time case tracking, and an unbreakable digital chain of custody. Built natively for BNSS &amp; BSA 2023 with client-side SHA-256 recursive hash chaining, Google Gemini Vision OCR, and 1-click Zero FIR routing across 36 States &amp; UTs.
           </p>
+
           <ul class="tech-tags">
             <li>React 19</li>
             <li>Supabase PostgreSQL</li>
             <li>Row-Level Security (RLS)</li>
-            <li>SHA-256 Web Crypto API</li>
-            <li>Google Gemini Vision</li>
-            <li>BNSS &amp; BSA 2023</li>
+            <li>SHA-256 Web Crypto</li>
+            <li>Google Gemini AI</li>
+            <li>BNSS / BSA 2023</li>
           </ul>
-          <p class="responsible-note">Role: Team Lead &amp; Chief Architect · 100% compliant with Sec 63 BSA 2023 &amp; Aadhaar Act 2016.</p>
+
+          <div class="project-metrics-box">
+            <div class="metric-item">
+              <span class="metric-val">&lt; 30s</span>
+              <span class="metric-lbl">Zero FIR Handover</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">Sec 63 BSA</span>
+              <span class="metric-lbl">Chained Ledger Integrity</span>
+            </div>
+          </div>
+
           <div class="project-actions">
-            <a href="https://e-nyayalaya.netlify.app/" class="btn btn-small" target="_blank" rel="noopener" onclick="event.stopPropagation()">Live Demo</a>
-            <a href="https://github.com/TheGhostHacker-Ai/e-Nyayalaya" class="btn btn-small btn-ghost" target="_blank" rel="noopener" onclick="event.stopPropagation()">GitHub</a>
+            <a href="https://e-nyayalaya.netlify.app/" class="btn btn-live" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+              Live Demo
+            </a>
+            <a href="https://github.com/TheGhostHacker-Ai/e-Nyayalaya" class="btn btn-small" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
             <button class="btn btn-small btn-ghost" data-open-project="enyayalaya">Details</button>
           </div>
         </article>
 
-        <!-- Project 2 -->
-        <article class="project-card" data-project="scanner" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Website Vulnerability Scanner">
+        <!-- Project 2: SehatSaathi -->
+        <article class="project-card" data-project="sehatsaathi" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for SehatSaathi">
+          <div class="card-glow"></div>
           <div class="project-card-top">
-            <span class="project-category">Cybersecurity · Python</span>
-            <span class="status-badge status-progress">In Progress</span>
+            <span class="project-category">AI/ML &bull; HEALTHCARE WEB APP</span>
+            <span class="status-badge status-hackathon">SIH Innovation</span>
           </div>
-          <h3 class="project-title">Website Vulnerability Scanner</h3>
+
+          <h3 class="project-title">SehatSaathi — AI-Enabled Healthcare Platform</h3>
+          
           <p class="project-desc">
-            Developing a Python-based security assessment tool for scanning authorized HTTP/HTTPS
-            websites for potential security issues and automating basic security checks.
+            An AI-assisted medical application engineered for healthcare accessibility, interactive symptom checking, and patient navigation. Deployed live on global cloud infrastructure with user-centric interaction design.
           </p>
+
           <ul class="tech-tags">
-            <li>Python</li>
-            <li>HTTP/HTTPS</li>
-            <li>Security Assessment</li>
-            <li>Vulnerability Analysis</li>
+            <li>React</li>
+            <li>AI / ML APIs</li>
+            <li>Tailwind CSS</li>
+            <li>Netlify</li>
+            <li>JavaScript</li>
           </ul>
-          <p class="responsible-note">Developed for authorized security testing and educational purposes.</p>
-          <div class="project-actions">
-            <a href="https://github.com/TheGhostHacker-Ai/Website-vulnerability-scanner" class="btn btn-small" target="_blank" rel="noopener" onclick="event.stopPropagation()">GitHub</a>
-            <button class="btn btn-small btn-ghost" data-open-project="scanner">Details</button>
+
+          <div class="project-actions" style="margin-top: auto;">
+            <a href="https://sehatsaathii.netlify.app/" class="btn btn-live" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+              Live Demo
+            </a>
+            <button class="btn btn-small btn-ghost" data-open-project="sehatsaathi">Details</button>
           </div>
         </article>
 
-        <!-- Project 3: SehatSaathi -->
-        <article class="project-card" data-project="sehatsaathi" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for SehatSaathi">
+        <!-- Project 3: Website Vulnerability Scanner -->
+        <article class="project-card" data-project="scanner" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Website Vulnerability Scanner">
+          <div class="card-glow"></div>
           <div class="project-card-top">
-            <span class="project-category">AI · Healthcare · Accessibility</span>
-            <span class="status-badge status-hackathon">Smart India Hackathon</span>
+            <span class="project-category">CYBERSECURITY &bull; PYTHON</span>
+            <span class="status-badge status-progress">Security Tool</span>
           </div>
-          <h3 class="project-title">SehatSaathi — AI-Enabled Healthcare Application</h3>
+
+          <h3 class="project-title">Website Vulnerability Scanner</h3>
+          
           <p class="project-desc">
-            AI-assisted healthcare platform focused on medical accessibility, symptom checking, doctor connectivity, and user-centric health assistance. Built with responsive UI and modern cloud deployment.
+            A Python security tool for scanning authorized target HTTP/HTTPS endpoints, identifying misconfigured security headers, missing SSL protections, and common server vulnerabilities with structured reporting.
           </p>
+
           <ul class="tech-tags">
-            <li>React</li>
-            <li>AI / ML</li>
-            <li>Healthcare API</li>
-            <li>Tailwind CSS</li>
-            <li>Netlify</li>
+            <li>Python</li>
+            <li>HTTP/HTTPS</li>
+            <li>Security Headers</li>
+            <li>Vulnerability Analysis</li>
           </ul>
-          <p class="responsible-note">Role: Full Stack &amp; UI/UX Development · Built for accessibility and user-centric health workflows.</p>
-          <div class="project-actions">
-            <a href="https://sehatsaathii.netlify.app/" class="btn btn-small" target="_blank" rel="noopener" onclick="event.stopPropagation()">Live Demo</a>
-            <button class="btn btn-small btn-ghost" data-open-project="sehatsaathi">Details</button>
+
+          <div class="project-actions" style="margin-top: auto;">
+            <a href="https://github.com/TheGhostHacker-Ai/Website-vulnerability-scanner" class="btn btn-small" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <button class="btn btn-small btn-ghost" data-open-project="scanner">Details</button>
           </div>
         </article>
 
         <!-- Project 4: RudraX -->
         <article class="project-card" data-project="rudrax" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for RudraX">
+          <div class="card-glow"></div>
           <div class="project-card-top">
-            <span class="project-category">AI · Voice &amp; Automation</span>
+            <span class="project-category">AI/ML &bull; VOICE &bull; AUTOMATION</span>
             <span class="status-badge status-progress">In Progress</span>
           </div>
+
           <h3 class="project-title">RudraX — AI Home Assistant</h3>
+          
           <p class="project-desc">
-            Developing an advanced AI-powered assistant for contextual information retrieval, voice interaction, home automation, and smart desktop productivity with custom speech and intent recognition models.
+            An advanced AI-powered assistant designed for contextual voice interactions, speech recognition, smart desktop automation, and information synthesis without third-party cloud lock-in.
           </p>
+
           <ul class="tech-tags">
             <li>Python</li>
-            <li>Generative AI</li>
             <li>Speech Recognition</li>
             <li>NLP</li>
-            <li>Automation</li>
+            <li>OS Automation</li>
           </ul>
-          <p class="responsible-note">Personal AI automation system with voice and contextual assistant capabilities.</p>
-          <div class="project-actions">
+
+          <div class="project-actions" style="margin-top: auto;">
             <button class="btn btn-small btn-ghost" data-open-project="rudrax">Details</button>
           </div>
         </article>
@@ -306,137 +327,301 @@
     </div>
   </section>
 
-  <!-- ============ ACTIVITIES ============ -->
-  <section class="section section-alt" id="activities">
-    <div class="section-inner">
-      <p class="eyebrow">04 / Activities</p>
-      <h2 class="section-title">Cybersecurity Activities</h2>
-
-      <div class="activity-card">
-        <div class="activity-top">
-          <h3>Are We Really Safe: Online</h3>
-          <span class="activity-org">HCL Foundation</span>
-        </div>
-        <p class="activity-type">Cybersecurity Awareness Presentation</p>
-        <p class="activity-desc">
-          Delivered a team presentation covering phishing, social engineering, data privacy,
-          cyber threats and preventive measures.
-        </p>
-        <ul class="tech-tags">
-          <li>Teamwork</li>
-          <li>Research</li>
-          <li>Communication</li>
-          <li>Cybersecurity Awareness</li>
-        </ul>
-        <a class="btn btn-small btn-ghost" href="https://www.linkedin.com/posts/narendra-kumar-083ba8314_cybersecurity-hclfoundation-teamwork-activity-7430636541921894400-2WC5" target="_blank" rel="noopener">View LinkedIn Post</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CERTIFICATIONS ============ -->
+  <!-- ============ 4. CERTIFICATIONS ============ -->
   <section class="section" id="certifications">
     <div class="section-inner">
-      <p class="eyebrow">05 / Certifications</p>
+      <p class="eyebrow">03 // Verified Credentials</p>
       <h2 class="section-title">Certifications</h2>
 
-      <div class="cert-columns">
-        <div class="cert-column">
-          <h3>Cybersecurity &amp; Digital Forensics</h3>
-          <ul class="cert-list">
-            <li><span class="cert-name">Network Security Engineer</span><span class="cert-issuer">Skill India Digital Hub / NASSCOM</span></li>
-            <li><span class="cert-name">Analyst Endpoint Security</span><span class="cert-issuer">Skill India Digital Hub / NASSCOM</span></li>
-            <li><span class="cert-name">Digital Forensics Essentials</span><span class="cert-issuer">Indian Cyber Club (ICC)</span></li>
-            <li><span class="cert-name">Ethical Hacking Essentials</span><span class="cert-issuer">EC-Council</span></li>
-            <li><span class="cert-name">Dark Web, Anonymity &amp; Cryptocurrency</span><span class="cert-issuer">EC-Council</span></li>
-            <li><span class="cert-name">Network Security</span><span class="cert-issuer">Great Learning Academy</span></li>
-            <li><span class="cert-name">Ethical Hacking Megamind Workshop</span><span class="cert-issuer">Nikistian Media Pvt. Ltd.</span></li>
-          </ul>
+      <div class="cert-grid">
+        
+        <div class="cert-card">
+          <div class="cert-badge-icon">&#128274;</div>
+          <div class="cert-body">
+            <h4 class="cert-name">Network Security Engineer</h4>
+            <p class="cert-issuer">Skill India Digital Hub / NASSCOM</p>
+          </div>
+          <span class="cert-tag">Verified</span>
         </div>
 
-        <div class="cert-column">
-          <h3>AI &amp; Industry</h3>
-          <ul class="cert-list">
-            <li><span class="cert-name">ViCoDathon 2026</span><span class="cert-issuer">AB TALKS</span></li>
-            <li><span class="cert-name">AI Orientation Session</span><span class="cert-issuer">HCL GUVI Centre, Lucknow</span></li>
-            <li><span class="cert-name">Generative AI Workshop</span><span class="cert-issuer">MAAC Academy</span></li>
-            <li><span class="cert-name">ChatGPT &amp; AI Masterclass</span><span class="cert-issuer">Nikistian Media Pvt. Ltd.</span></li>
-            <li><span class="cert-name">Logic Building for AI</span><span class="cert-issuer">Tinkerly</span></li>
-          </ul>
+        <div class="cert-card">
+          <div class="cert-badge-icon">&#128737;</div>
+          <div class="cert-body">
+            <h4 class="cert-name">Analyst Endpoint Security</h4>
+            <p class="cert-issuer">Skill India Digital Hub / NASSCOM</p>
+          </div>
+          <span class="cert-tag">Verified</span>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============ GITHUB ============ -->
-  <section class="section section-alt" id="github">
-    <div class="section-inner">
-      <p class="eyebrow">06 / GitHub</p>
-      <h2 class="section-title">GitHub</h2>
-      <p class="section-lead">Selected projects and experiments in cybersecurity, Python and software development.</p>
-
-      <div id="github-repos" class="repo-grid" aria-live="polite">
-        <p class="repo-status" id="repo-status">Loading repositories…</p>
-      </div>
-
-      <a href="https://github.com/TheGhostHacker-Ai" class="btn btn-secondary" target="_blank" rel="noopener">View Full GitHub Profile</a>
-    </div>
-  </section>
-
-  <!-- ============ LINKEDIN ============ -->
-  <section class="section" id="linkedin">
-    <div class="section-inner">
-      <p class="eyebrow">07 / LinkedIn</p>
-      <h2 class="section-title">LinkedIn</h2>
-      <div class="linkedin-card">
-        <div>
-          <h3>Narendra Kumar</h3>
-          <p>B.Tech CSE Student · Cybersecurity &amp; Digital Forensics</p>
+        <div class="cert-card">
+          <div class="cert-badge-icon">&#128269;</div>
+          <div class="cert-body">
+            <h4 class="cert-name">Digital Forensics Essentials</h4>
+            <p class="cert-issuer">Indian Cyber Club (ICC)</p>
+          </div>
+          <span class="cert-tag">Credential</span>
         </div>
-        <a href="https://www.linkedin.com/in/narendra-kumar-083ba8314/" class="btn btn-secondary" target="_blank" rel="noopener">View Profile</a>
+
+        <div class="cert-card">
+          <div class="cert-badge-icon">&#9889;</div>
+          <div class="cert-body">
+            <h4 class="cert-name">Ethical Hacking Essentials</h4>
+            <p class="cert-issuer">EC-Council</p>
+          </div>
+          <span class="cert-tag">EC-Council</span>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-badge-icon">&#129302;</div>
+          <div class="cert-body">
+            <h4 class="cert-name">Dark Web, Anonymity &amp; Cryptocurrency</h4>
+            <p class="cert-issuer">EC-Council</p>
+          </div>
+          <span class="cert-tag">EC-Council</span>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-badge-icon">&#127760;</div>
+          <div class="cert-body">
+            <h4 class="cert-name">Network Security</h4>
+            <p class="cert-issuer">Great Learning Academy</p>
+          </div>
+          <span class="cert-tag">Verified</span>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-badge-icon">&#129303;</div>
+          <div class="cert-body">
+            <h4 class="cert-name">ViCoDathon 2026</h4>
+            <p class="cert-issuer">AB TALKS</p>
+          </div>
+          <span class="cert-tag">Hackathon</span>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-badge-icon">&#129504;</div>
+          <div class="cert-body">
+            <h4 class="cert-name">Logic Building for AI</h4>
+            <p class="cert-issuer">Tinkerly</p>
+          </div>
+          <span class="cert-tag">AI/ML</span>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ============ RESUME ============ -->
-  <section class="section section-alt resume-section" id="resume">
-    <div class="section-inner resume-inner">
-      <div>
-        <p class="eyebrow">08 / Resume</p>
-        <h2 class="section-title">Resume</h2>
-        <p class="section-lead">A complete summary of education, skills, projects and certifications.</p>
-      </div>
-      <a href="resume.pdf" class="btn btn-primary" download>Download Resume</a>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="section" id="contact">
+  <!-- ============ 5. ACHIEVEMENTS & ACTIVITIES ============ -->
+  <section class="section section-alt" id="activities">
     <div class="section-inner">
-      <p class="eyebrow">09 / Contact</p>
-      <h2 class="section-title">Let's Connect</h2>
+      <p class="eyebrow">04 // Track Record</p>
+      <h2 class="section-title">Achievements &amp; Activities</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Smart India Hackathon (SIH 2026)</h3>
+              <span class="timeline-badge">Team Lead &amp; Chief Architect</span>
+            </div>
+            <p class="timeline-org">National Innovation Initiative &bull; Ministry of Education</p>
+            <p class="timeline-desc">
+              Led a 6-member team to design and architect <strong>e-Nyayalaya</strong>, an end-to-end zero-trust judicial platform implementing recursive SHA-256 block chaining, Google Gemini Vision OCR, and instant Zero FIR handovers under the New Criminal Laws, 2023.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Cybersecurity Awareness: Are We Really Safe Online</h3>
+              <span class="timeline-badge">Speaker &amp; Researcher</span>
+            </div>
+            <p class="timeline-org">HCL Foundation</p>
+            <p class="timeline-desc">
+              Delivered a structured security awareness presentation on social engineering prevention, phishing mitigation, threat vector analysis, and defensive digital habits for community stakeholders.
+            </p>
+            <a class="btn btn-small btn-ghost" href="https://www.linkedin.com/posts/narendra-kumar-083ba8314_cybersecurity-hclfoundation-teamwork-activity-7430636541921894400-2WC5" target="_blank" rel="noopener">
+              View LinkedIn Post &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>AI Orientation &amp; Masterclasses</h3>
+              <span class="timeline-badge">Continuous Learning</span>
+            </div>
+            <p class="timeline-org">HCL GUVI Centre &bull; MAAC Academy &bull; Nikistian Media</p>
+            <p class="timeline-desc">
+              Completed structured technical masterclasses covering Generative AI workflows, prompt engineering, logic building for intelligent systems, and ethical AI integration.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <p class="eyebrow">05 // Technical Capabilities</p>
+      <h2 class="section-title">Skills</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <div class="skill-header">
+            <span class="skill-icon">&#128187;</span>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">Python</span>
+            <span class="chip">C</span>
+            <span class="chip">HTML5 / CSS3</span>
+            <span class="chip">JavaScript (ES6+)</span>
+            <span class="chip">SQL (MySQL/Postgres)</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-header">
+            <span class="skill-icon">&#128737;</span>
+            <h3>Security &amp; Forensics</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip chip-accent">Kali Linux</span>
+            <span class="chip chip-accent">Kali NetHunter</span>
+            <span class="chip">Digital Forensics</span>
+            <span class="chip">SHA-256 Web Crypto</span>
+            <span class="chip">Vulnerability Assessment</span>
+            <span class="chip">Wireshark &amp; Nmap</span>
+            <span class="chip">Tor &amp; Anonymity</span>
+            <span class="chip">Zero-Trust Architecture</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-header">
+            <span class="skill-icon">&#129504;</span>
+            <h3>AI &amp; Machine Learning</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip chip-green">Generative AI</span>
+            <span class="chip chip-green">Prompt Engineering</span>
+            <span class="chip">Google Gemini Vision OCR</span>
+            <span class="chip">Speech Recognition</span>
+            <span class="chip">NLP Intent Parsing</span>
+            <span class="chip">AI-Assisted Dev</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-header">
+            <span class="skill-icon">&#9729;</span>
+            <h3>Cloud, DB &amp; Systems</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">Supabase PostgreSQL (RLS)</span>
+            <span class="chip">Netlify Cloud CDN</span>
+            <span class="chip">Linux / Ubuntu</span>
+            <span class="chip">Windows</span>
+            <span class="chip">Git &amp; GitHub</span>
+            <span class="chip">Realtime WebSockets</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. CONTACT ============ -->
+  <section class="section section-alt" id="contact">
+    <div class="section-inner">
+      <p class="eyebrow">06 // Connect</p>
+      <h2 class="section-title">Get in Touch</h2>
       <p class="section-lead">
-        Interested in cybersecurity, digital forensics, security research or technology projects?
-        Feel free to connect.
+        Open for cybersecurity research, AI/ML engineering, high-impact software development, or technical collaborations.
       </p>
 
-      <ul class="contact-list">
-        <li>
-          <span class="contact-label">Email</span>
-          <a href="mailto:narendrakumarvk2017@gmail.com">narendrakumarvk2017@gmail.com</a>
-        </li>
-        <li>
-          <span class="contact-label">LinkedIn</span>
-          <a href="https://www.linkedin.com/in/narendra-kumar-083ba8314/" target="_blank" rel="noopener">linkedin.com/in/narendra-kumar-083ba8314</a>
-        </li>
-        <li>
-          <span class="contact-label">GitHub</span>
-          <a href="https://github.com/TheGhostHacker-Ai" target="_blank" rel="noopener">github.com/TheGhostHacker-Ai</a>
-        </li>
-        <li>
-          <span class="contact-label">Location</span>
-          <span>Barabanki, Uttar Pradesh, India</span>
-        </li>
-      </ul>
+      <div class="contact-grid">
+        
+        <!-- Contact Information Card -->
+        <div class="contact-info-card">
+          <h3>Direct Channels</h3>
+          <p class="contact-info-desc">Feel free to reach out directly via email, connect on LinkedIn, or inspect my open source projects on GitHub.</p>
+
+          <ul class="contact-details-list">
+            <li>
+              <span class="contact-icon">&#9993;</span>
+              <div>
+                <span class="contact-detail-lbl">Email</span>
+                <a href="mailto:narendrakumarvk2017@gmail.com">narendrakumarvk2017@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon">&#128279;</span>
+              <div>
+                <span class="contact-detail-lbl">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/narendra-kumar-083ba8314/" target="_blank" rel="noopener">linkedin.com/in/narendra-kumar-083ba8314</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon">&#128025;</span>
+              <div>
+                <span class="contact-detail-lbl">GitHub</span>
+                <a href="https://github.com/TheGhostHacker-Ai" target="_blank" rel="noopener">github.com/TheGhostHacker-Ai</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon">&#128205;</span>
+              <div>
+                <span class="contact-detail-lbl">Location</span>
+                <span>Barabanki / Lucknow, Uttar Pradesh, India</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="contact-form-card">
+          <h3>Send a Message</h3>
+          <form id="contact-form" class="contact-form" action="mailto:narendrakumarvk2017@gmail.com" method="POST" enctype="text/plain">
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input type="text" id="form-name" name="name" required placeholder="Narendra Kumar">
+            </div>
+
+            <div class="form-group">
+              <label for="form-email">Your Email</label>
+              <input type="email" id="form-email" name="email" required placeholder="name@domain.com">
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" name="subject" required placeholder="Collaboration / Inquiry">
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" rows="4" required placeholder="Write your message here..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+          </form>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -444,17 +629,19 @@
 
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
-  <p class="footer-name">Narendra Kumar</p>
-  <p class="footer-role">B.Tech CSE | Cybersecurity &amp; Digital Forensics</p>
-  <p class="footer-copy">© 2026 Narendra Kumar</p>
+  <div class="footer-inner">
+    <p class="footer-name">Narendra Kumar</p>
+    <p class="footer-role">B.Tech CSE &bull; Cybersecurity, Digital Forensics &amp; AI/ML Specialist</p>
+    <p class="footer-copy">&copy; 2026 Narendra Kumar &bull; Built with Zero Bloat &bull; GIGW 3.0 &amp; Dark Modern</p>
+  </div>
 </footer>
 
 <!-- ============ PROJECT DETAIL MODAL ============ -->
 <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
   <div class="modal">
-    <button class="modal-close" id="modal-close" aria-label="Close details">×</button>
+    <button class="modal-close" id="modal-close" aria-label="Close details">&times;</button>
 
-    <p class="eyebrow" id="modal-eyebrow">Project Detail</p>
+    <p class="eyebrow" id="modal-eyebrow">Project Technical Spec</p>
     <h3 id="modal-title">e-Nyayalaya — Unified Digital Evidence &amp; Case Docketing Grid</h3>
 
     <div class="modal-section">
@@ -494,7 +681,7 @@
     </div>
 
     <div class="modal-actions" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
-      <a href="https://e-nyayalaya.netlify.app/" id="modal-demo-link" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+      <a href="https://e-nyayalaya.netlify.app/" id="modal-demo-link" class="btn btn-live" target="_blank" rel="noopener">Live Demo</a>
       <a href="https://github.com/TheGhostHacker-Ai/e-Nyayalaya" id="modal-repo-link" class="btn btn-secondary" target="_blank" rel="noopener">View Repository</a>
     </div>
   </div>
