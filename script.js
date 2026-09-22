@@ -259,28 +259,3 @@ if (modal) {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modal && !modal.hidden) closeModal();
 });
-
-// ============================================================
-// CONTACT FORM SUBMISSION HANDLER
-// ============================================================
-const contactForm = document.getElementById('contact-form');
-const formFeedback = document.getElementById('form-feedback');
-
-if (contactForm && formFeedback) {
-  contactForm.addEventListener('submit', (e) => {
-    const name = document.getElementById('form-name')?.value;
-    const email = document.getElementById('form-email')?.value;
-    const subject = document.getElementById('form-subject')?.value;
-    const message = document.getElementById('form-message')?.value;
-
-    if (!name || !email || !message) {
-      e.preventDefault();
-      formFeedback.textContent = 'Please fill out all required fields.';
-      formFeedback.className = 'form-feedback error';
-      return;
-    }
-
-    formFeedback.textContent = 'Preparing email client with your message...';
-    formFeedback.className = 'form-feedback success';
-  });
-}
