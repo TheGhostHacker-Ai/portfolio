@@ -66,7 +66,8 @@ const PROJECTS_DATA = {
     technologies: 'React 19, Vite 8, Supabase PostgreSQL 15, Row-Level Security (RLS), SHA-256 Web Crypto API, Google Gemini Multimodal Vision, Netlify CI/CD, GIGW 3.0',
     complianceTitle: 'Compliance & Standards',
     complianceDesc: 'Fully compliant with the Bharatiya Nagarik Suraksha Sanhita (BNSS 2023), Bharatiya Sakshya Adhiniyam (BSA 2023), Aadhaar Act 2016, and Supreme Court e-Courts Phase III / ICJS architecture.',
-    repoUrl: 'https://github.com/TheGhostHacker-Ai/e-Nyayalaya'
+    repoUrl: 'https://github.com/TheGhostHacker-Ai/e-Nyayalaya',
+    demoUrl: 'https://e-nyayalaya.netlify.app/'
   },
   scanner: {
     title: 'Website Vulnerability Scanner',
@@ -81,7 +82,8 @@ const PROJECTS_DATA = {
     technologies: 'Python, HTTP/HTTPS, Security Assessment Tools',
     complianceTitle: 'Responsible Use',
     complianceDesc: 'This tool is intended for authorized security testing and educational purposes only. Only scan systems you own or have explicit permission to test.',
-    repoUrl: 'https://github.com/TheGhostHacker-Ai/Website-vulnerability-scanner'
+    repoUrl: 'https://github.com/TheGhostHacker-Ai/Website-vulnerability-scanner',
+    demoUrl: null
   }
 };
 
@@ -98,6 +100,7 @@ const openModal = (triggerEl, projectKey = 'enyayalaya') => {
   const compTitleEl = document.getElementById('modal-compliance-title');
   const compDescEl = document.getElementById('modal-compliance-desc');
   const repoLinkEl = document.getElementById('modal-repo-link');
+  const demoLinkEl = document.getElementById('modal-demo-link');
 
   if (titleEl) titleEl.textContent = data.title;
   if (overviewEl) overviewEl.textContent = data.overview;
@@ -107,6 +110,15 @@ const openModal = (triggerEl, projectKey = 'enyayalaya') => {
   if (compTitleEl) compTitleEl.textContent = data.complianceTitle;
   if (compDescEl) compDescEl.textContent = data.complianceDesc;
   if (repoLinkEl) repoLinkEl.href = data.repoUrl;
+
+  if (demoLinkEl) {
+    if (data.demoUrl) {
+      demoLinkEl.href = data.demoUrl;
+      demoLinkEl.style.display = 'inline-flex';
+    } else {
+      demoLinkEl.style.display = 'none';
+    }
+  }
 
   if (featuresEl) {
     featuresEl.innerHTML = '';
