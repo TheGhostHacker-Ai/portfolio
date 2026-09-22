@@ -576,6 +576,19 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 
+.about-motto {
+  font-family: var(--font-mono);
+  color: var(--green-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 24px;
+  padding: 10px 16px;
+  background: var(--green-tint);
+  border: 1px solid rgba(0, 255, 157, 0.25);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
 .tech-stack-badges {
   margin-top: 28px;
   padding-top: 24px;
