@@ -84,6 +84,40 @@ const PROJECTS_DATA = {
     complianceDesc: 'This tool is intended for authorized security testing and educational purposes only. Only scan systems you own or have explicit permission to test.',
     repoUrl: 'https://github.com/TheGhostHacker-Ai/Website-vulnerability-scanner',
     demoUrl: null
+  },
+  sehatsaathi: {
+    title: 'SehatSaathi — AI-Enabled Healthcare Application',
+    overview: 'An AI-assisted healthcare platform built to improve medical accessibility, multilingual patient interactions, and symptom analysis with a user-centric design.',
+    objective: 'Developed for the Smart India Hackathon to bridge the gap between patients and primary healthcare information through intelligent AI assistance.',
+    approach: 'Integrates responsive frontend interfaces with AI/ML diagnostic APIs and clean medical workflow routing, enabling patients to describe symptoms and receive structured health guidance.',
+    features: [
+      'Interactive AI health assistant for preliminary symptom checking',
+      'Doctor discovery and medical workflow navigation',
+      'Mobile-responsive UI designed for accessibility',
+      'Cloud deployment on Netlify CDN'
+    ],
+    technologies: 'React, JavaScript, AI / ML Diagnostic APIs, Tailwind CSS, Netlify Cloud',
+    complianceTitle: 'Project Context',
+    complianceDesc: 'Developed for Smart India Hackathon innovation challenges focused on accessible digital healthcare in India.',
+    repoUrl: 'https://github.com/TheGhostHacker-Ai',
+    demoUrl: 'https://sehatsaathii.netlify.app/'
+  },
+  rudrax: {
+    title: 'RudraX — AI Home Assistant',
+    overview: 'A smart voice-driven AI home assistant designed for contextual information retrieval, voice command execution, IoT automation, and desktop productivity.',
+    objective: 'Built to explore on-device speech recognition, natural language intent mapping, and automated device interaction without reliance on opaque cloud lock-in.',
+    approach: 'Combines Python speech recognition engines, text-to-speech synthesis, and custom NLP intent parsers to execute system tasks, answer contextual queries, and manage automation workflows.',
+    features: [
+      'Real-time voice command processing and audio feedback',
+      'Contextual intent recognition and question answering',
+      'Automated desktop workflow triggers and system utilities',
+      'Modular architecture allowing extension to IoT and smart appliances'
+    ],
+    technologies: 'Python, Speech Recognition, NLP, PyAudio, OS Automation APIs',
+    complianceTitle: 'Project Status',
+    complianceDesc: 'Active ongoing development exploring localized edge AI processing and low-latency voice interactions.',
+    repoUrl: 'https://github.com/TheGhostHacker-Ai',
+    demoUrl: null
   }
 };
 
