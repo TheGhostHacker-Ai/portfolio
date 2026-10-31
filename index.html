@@ -18,6 +18,7 @@
 </head>
 <body>
 
+<div class="scroll-progress-bar" id="scroll-progress-bar" aria-hidden="true"></div>
 <div class="circuit-grid" aria-hidden="true"></div>
 
 <a class="skip-link" href="#main">Skip to content</a>
@@ -31,16 +32,20 @@
 
     <nav class="primary-nav" id="primary-nav" aria-label="Primary">
       <ul>
+        <li><a href="#spotlight" data-nav>Spotlight</a></li>
         <li><a href="#about" data-nav>About</a></li>
         <li><a href="#projects" data-nav>Projects</a></li>
         <li><a href="#certifications" data-nav>Certifications</a></li>
-        <li><a href="#activities" data-nav>Activities</a></li>
         <li><a href="#skills" data-nav>Skills</a></li>
         <li><a href="#contact" data-nav>Contact</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
+      <div class="header-status-pill">
+        <span class="pulse-dot"></span>
+        <span>Open for Roles</span>
+      </div>
       <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -50,10 +55,10 @@
 
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
     <ul>
+      <li><a href="#spotlight" data-nav>Spotlight</a></li>
       <li><a href="#about" data-nav>About</a></li>
       <li><a href="#projects" data-nav>Projects</a></li>
       <li><a href="#certifications" data-nav>Certifications</a></li>
-      <li><a href="#activities" data-nav>Activities</a></li>
       <li><a href="#skills" data-nav>Skills</a></li>
       <li><a href="#contact" data-nav>Contact</a></li>
     </ul>
@@ -62,57 +67,188 @@
 
 <main id="main">
 
-  <!-- ============ 1. HERO ============ -->
+  <!-- ============ 1. HERO WITH INTERACTIVE TERMINAL ============ -->
   <section class="hero" id="top">
-    <div class="hero-inner">
+    <div class="hero-inner hero-bento-layout">
 
-      <div class="terminal-badge" aria-hidden="true">
-        <span class="pulse-dot"></span>
-        <span class="badge-text">STATUS: ACTIVE // CSE, CYBERSECURITY &amp; IT SUPPORT</span>
+      <!-- Left Column: Intro & Headline -->
+      <div class="hero-left">
+        <div class="terminal-badge" aria-hidden="true">
+          <span class="pulse-dot"></span>
+          <span class="badge-text">STATUS: ACTIVE // CSE, CYBERSECURITY &amp; IT SUPPORT</span>
+        </div>
+
+        <h1 class="hero-name">Narendra Kumar</h1>
+
+        <!-- Terminal Typing Tagline -->
+        <div class="hero-role-wrapper">
+          <span class="terminal-prompt">&gt;</span>
+          <span class="hero-role" id="typing-text">Computer Science &amp; Engineering | Cybersecurity, AI &amp; IT Support</span>
+          <span class="typing-cursor"></span>
+        </div>
+
+        <p class="hero-intro">
+          B.Tech Computer Science &amp; Engineering student (<strong>CGPA 8.04/10</strong>) who builds and deploys secure, 
+          AI-assisted web systems and is comfortable with PC hardware, OS installation, and network troubleshooting. 
+          Led a 6-member Smart India Hackathon 2026 team as <strong>Team Lead and Chief Architect</strong>. 
+          Seeking an entry-level role in cybersecurity, IT support, or software development.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6m8 14h8"/></svg>
+            Explore Projects
+          </a>
+          <a href="resume.pdf" class="btn btn-secondary" id="resume-btn" target="_blank" rel="noopener">
+            <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/></svg>
+            Resume (PDF)
+          </a>
+          <button class="btn btn-ghost copy-email-btn" id="copy-email-hero" data-copy="narendrakumarvk2017@gmail.com" aria-label="Copy Email address">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span class="btn-copy-label">Copy Email</span>
+          </button>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/TheGhostHacker-Ai" target="_blank" rel="noopener" aria-label="GitHub Profile">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/narendra-kumar-083ba8314/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="mailto:narendrakumarvk2017@gmail.com" aria-label="Send Email">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>Email</span>
+          </a>
+        </div>
       </div>
 
-      <h1 class="hero-name">Narendra Kumar</h1>
-
-      <!-- Terminal Typing Tagline -->
-      <div class="hero-role-wrapper">
-        <span class="terminal-prompt">&gt;</span>
-        <span class="hero-role" id="typing-text">Computer Science &amp; Engineering | Cybersecurity, AI &amp; IT Support</span>
-        <span class="typing-cursor"></span>
+      <!-- Right Column: Interactive Cyber Console -->
+      <div class="hero-right">
+        <div class="cyber-terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="terminal-title">narendra@cybersec-node: ~</div>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="term-line term-dim"># Interactive Node Console &bull; Type command or click:</div>
+            <div class="term-chips">
+              <button class="term-chip" data-cmd="whoami">whoami</button>
+              <button class="term-chip" data-cmd="flagship">flagship</button>
+              <button class="term-chip" data-cmd="skills">skills</button>
+              <button class="term-chip" data-cmd="certs">certs</button>
+              <button class="term-chip" data-cmd="contact">contact</button>
+              <button class="term-chip" data-cmd="clear">clear</button>
+            </div>
+            <div class="terminal-output" id="terminal-output">
+              <p><span class="prompt-sym">&gt;</span> <strong class="term-accent">whoami</strong></p>
+              <p class="term-res">Narendra Kumar &bull; B.Tech CSE (8.04 CGPA) &bull; Team Lead &amp; Chief Architect @ e-Nyayalaya &bull; Barabanki, UP</p>
+            </div>
+            <form class="terminal-input-row" id="terminal-form" onsubmit="return false;">
+              <span class="prompt-sym">&gt;</span>
+              <input type="text" id="terminal-input" class="terminal-input" placeholder="Type 'help', 'flagship', 'skills'..." autocomplete="off" spellcheck="false">
+            </form>
+          </div>
+        </div>
       </div>
 
-      <p class="hero-intro">
-        B.Tech Computer Science &amp; Engineering student (<strong>CGPA 8.04/10</strong>) who builds and deploys secure, 
-        AI-assisted web systems and is comfortable with PC hardware, OS installation, and network troubleshooting. 
-        Led a 6-member Smart India Hackathon 2026 team as <strong>Team Lead and Chief Architect</strong>. 
-        Seeking an entry-level role in cybersecurity, IT support, or software development.
-      </p>
+    </div>
+  </section>
 
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">
-          <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6m8 14h8"/></svg>
-          Explore Projects
-        </a>
-        <a href="resume.pdf" class="btn btn-secondary" id="resume-btn" target="_blank" rel="noopener">
-          <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"/></svg>
-          Download Resume
-        </a>
+  <!-- ============ 1.5 BENTO SPOTLIGHT MATRIX ============ -->
+  <section class="section section-bento" id="spotlight">
+    <div class="section-inner">
+      <p class="eyebrow">00 // At a Glance</p>
+      <h2 class="section-title">Engineering Bento Spotlight</h2>
+      <p class="section-lead">A high-density overview of flagship architecture, live client systems, and verified credentials.</p>
+
+      <div class="bento-grid">
+        <!-- Bento Card 1: Flagship SIH 2026 e-Nyayalaya -->
+        <div class="bento-card bento-hero-flagship">
+          <div class="bento-card-top">
+            <span class="bento-tag">Flagship Architecture</span>
+            <span class="status-badge status-featured">★ SIH 2026 Team Lead</span>
+          </div>
+          <h3 class="bento-title">e-Nyayalaya &mdash; Zero-Trust Judicial Case Grid</h3>
+          <p class="bento-desc">
+            Architected a national-scale electronic evidence &amp; case docketing platform natively aligned with the New Criminal Laws (BNSS &amp; BSA 2023). Employs recursive client-side SHA-256 block chaining, Google Gemini Vision OCR, and instant Zero FIR handovers across 36 States &amp; UTs.
+          </p>
+          <div class="bento-metrics">
+            <div class="b-metric">
+              <span class="b-val">&lt; 30s</span>
+              <span class="b-lbl">Zero FIR Handover</span>
+            </div>
+            <div class="b-metric">
+              <span class="b-val">Sec 63 BSA</span>
+              <span class="b-lbl">Tamper-Evident Ledger</span>
+            </div>
+            <div class="b-metric">
+              <span class="b-val">6-Member</span>
+              <span class="b-lbl">Chief Architect</span>
+            </div>
+          </div>
+          <div class="bento-actions">
+            <a href="https://e-nyayalaya.netlify.app/" target="_blank" rel="noopener" class="btn btn-live btn-sm">Live Demo</a>
+            <a href="https://github.com/TheGhostHacker-Ai/e-Nyayalaya" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">GitHub</a>
+            <button class="btn btn-ghost btn-sm" data-open-project="enyayalaya">Architecture Specs &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Bento Card 2: Live Client System Maa Gayatri -->
+        <div class="bento-card bento-client">
+          <div class="bento-card-top">
+            <span class="bento-tag">Live Production Client Site</span>
+            <span class="status-badge status-featured">★ Active Deployment</span>
+          </div>
+          <h3 class="bento-title">Official School Portal &mdash; Maa Gayatri Bal Vidya Mandir</h3>
+          <p class="bento-desc">
+            Designed and deployed the live official website for a recognized school (Classes 1&ndash;8) in Malauli, Barabanki. Features a custom Supabase-backed administrative panel for managing notices, media uploads, and daily updates.
+          </p>
+          <div class="bento-domain-pill">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>maagayatribalvidyamandir.in</span>
+          </div>
+          <div class="bento-actions">
+            <a href="https://maagayatribalvidyamandir.in" target="_blank" rel="noopener" class="btn btn-live btn-sm">Visit Site</a>
+            <button class="btn btn-ghost btn-sm" data-open-project="maagayatri">CMS Details &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Bento Card 3: Academic Excellence -->
+        <div class="bento-card bento-academic">
+          <div class="bento-card-top">
+            <span class="bento-tag">Academic Standing</span>
+            <span class="status-badge status-hackathon">SVNIET / AKTU</span>
+          </div>
+          <div class="bento-cgpa-display">
+            <span class="cgpa-number">8.04</span>
+            <span class="cgpa-total">/ 10 CGPA</span>
+          </div>
+          <h4 class="bento-title-sm">B.Tech Computer Science &amp; Engineering</h4>
+          <p class="bento-desc">
+            Expected 2028 &bull; Consistent academic performance through 4th semester with core focus on Cybersecurity, Forensics, and IT Infrastructure.
+          </p>
+        </div>
+
+        <!-- Bento Card 4: National Recognition & Innovation -->
+        <div class="bento-card bento-training">
+          <div class="bento-card-top">
+            <span class="bento-tag">National Recognition</span>
+            <span class="status-badge status-featured">MoE / AICTE</span>
+          </div>
+          <h4 class="bento-title-sm">Innovation Ambassador</h4>
+          <p class="bento-issuer">MoE&rsquo;s Innovation Cell &amp; AICTE (2025&ndash;26)</p>
+          <p class="bento-desc">
+            Trained across Foundation, Advanced, and Re-skilling levels. Certified in Network &amp; Endpoint Security (NASSCOM) and Digital Forensics (ICC / EC-Council).
+          </p>
+        </div>
       </div>
-
-      <div class="hero-socials">
-        <a href="https://github.com/TheGhostHacker-Ai" target="_blank" rel="noopener" aria-label="GitHub Profile">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          <span>GitHub</span>
-        </a>
-        <a href="https://www.linkedin.com/in/narendra-kumar-083ba8314/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          <span>LinkedIn</span>
-        </a>
-        <a href="mailto:narendrakumarvk2017@gmail.com" aria-label="Send Email">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>Email</span>
-        </a>
-      </div>
-
     </div>
   </section>
 
@@ -212,13 +348,21 @@
   <section class="section section-alt" id="projects">
     <div class="section-inner">
       <p class="eyebrow">02 // Featured Engineering</p>
-      <h2 class="section-title">Projects</h2>
-      <p class="section-lead">Production-ready systems, cryptographic architectures, and security analysis tools.</p>
+      <h2 class="section-title">Projects &amp; Systems</h2>
+      <p class="section-lead">Production systems, cryptographic architectures, AI tools, and vulnerability assessment utilities.</p>
 
-      <div class="project-grid">
+      <!-- Project Filter Bar -->
+      <div class="project-filter-bar">
+        <button class="filter-tab active" data-filter="all">All Projects (5)</button>
+        <button class="filter-tab" data-filter="security">Security &amp; Forensics</button>
+        <button class="filter-tab" data-filter="web">Web &amp; Cloud Systems</button>
+        <button class="filter-tab" data-filter="ai">AI / ML &amp; Speech</button>
+      </div>
+
+      <div class="project-grid" id="project-grid">
 
         <!-- Project 1: e-Nyayalaya (Flagship) -->
-        <article class="project-card featured-project" data-project="enyayalaya" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for e-Nyayalaya">
+        <article class="project-card featured-project" data-project="enyayalaya" data-category="security web ai" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for e-Nyayalaya">
           <div class="card-glow"></div>
           <div class="project-card-top">
             <span class="project-category">BLOCKCHAIN &bull; CYBERSECURITY &bull; LEGALTECH</span>
@@ -265,7 +409,7 @@
         </article>
 
         <!-- Project 2: Official School Website (Maa Gayatri Bal Vidya Mandir) -->
-        <article class="project-card" data-project="maagayatri" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Maa Gayatri Bal Vidya Mandir Official Website">
+        <article class="project-card" data-project="maagayatri" data-category="web" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Maa Gayatri Bal Vidya Mandir Official Website">
           <div class="card-glow"></div>
           <div class="project-card-top">
             <span class="project-category">WEB SYSTEM &bull; SUPABASE CMS &bull; CLIENT DEPLOYMENT</span>
@@ -296,8 +440,8 @@
           </div>
         </article>
 
-        <!-- Project 2: SehatSaathi -->
-        <article class="project-card" data-project="sehatsaathi" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for SehatSaathi">
+        <!-- Project 3: SehatSaathi -->
+        <article class="project-card" data-project="sehatsaathi" data-category="ai web" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for SehatSaathi">
           <div class="card-glow"></div>
           <div class="project-card-top">
             <span class="project-category">AI/ML &bull; HEALTHCARE WEB APP</span>
@@ -327,8 +471,8 @@
           </div>
         </article>
 
-        <!-- Project 3: Website Vulnerability Scanner -->
-        <article class="project-card" data-project="scanner" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Website Vulnerability Scanner">
+        <!-- Project 4: Website Vulnerability Scanner -->
+        <article class="project-card" data-project="scanner" data-category="security" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Website Vulnerability Scanner">
           <div class="card-glow"></div>
           <div class="project-card-top">
             <span class="project-category">CYBERSECURITY &bull; PYTHON</span>
@@ -357,8 +501,8 @@
           </div>
         </article>
 
-        <!-- Project 4: RudraX -->
-        <article class="project-card" data-project="rudrax" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for RudraX">
+        <!-- Project 5: RudraX -->
+        <article class="project-card" data-project="rudrax" data-category="ai" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for RudraX">
           <div class="card-glow"></div>
           <div class="project-card-top">
             <span class="project-category">AI/ML &bull; VOICE &bull; AUTOMATION</span>
@@ -678,10 +822,15 @@
             <h4 class="contact-channel-title">narendrakumarvk2017@gmail.com</h4>
             <p class="contact-channel-sub">Direct inbox for opportunities, research, or queries</p>
           </div>
-          <a href="mailto:narendrakumarvk2017@gmail.com" class="btn btn-primary btn-sm">
-            <span>Send Email</span>
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </a>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <a href="mailto:narendrakumarvk2017@gmail.com" class="btn btn-primary btn-sm">
+              <span>Send Email</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <button class="btn btn-secondary btn-sm copy-email-btn" data-copy="narendrakumarvk2017@gmail.com" aria-label="Copy Email address">
+              <span>Copy</span>
+            </button>
+          </div>
         </div>
 
         <!-- LinkedIn Card -->
@@ -788,6 +937,14 @@
     </div>
   </div>
 </div>
+
+<!-- Back to top button -->
+<a href="#top" class="back-to-top" id="back-to-top" aria-label="Back to top" title="Scroll to top">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</a>
+
+<!-- Floating copy feedback toast -->
+<div class="toast-notification" id="toast-notification" role="status" aria-live="polite"></div>
 
 <script src="script.js"></script>
 </body>

@@ -278,3 +278,130 @@ if (modal) {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modal && !modal.hidden) closeModal();
 });
+
+// ============================================================
+// INTERACTIVE CYBER TERMINAL SIMULATOR
+// ============================================================
+const terminalOutput = document.getElementById('terminal-output');
+const terminalInput = document.getElementById('terminal-input');
+const terminalForm = document.getElementById('terminal-form');
+const termChips = document.querySelectorAll('.term-chip');
+
+const COMMANDS = {
+  whoami: '<p class="term-res"><strong>Narendra Kumar</strong> &bull; B.Tech CSE (CGPA: 8.04/10) at SVNIET, AKTU &bull; Cybersecurity &amp; AI Specialist &bull; Barabanki, UP</p>',
+  flagship: '<p class="term-res"><strong>e-Nyayalaya (SIH 2026 Flagship)</strong> &bull; Role: Team Lead &amp; Chief Architect &bull; Tech: React 19, Supabase RLS, SHA-256 Recursive Chaining, Google Gemini Vision &bull; Status: Live at e-nyayalaya.netlify.app</p>',
+  skills: '<p class="term-res"><strong>Cybersecurity:</strong> Kali Linux, NetHunter, Forensics, Wireshark, Nmap, Cryptography<br><strong>IT Support:</strong> PC Hardware Assembly, Dual-Boot, Network Troubleshooting<br><strong>Development:</strong> Python, C, React 19, JavaScript, PostgreSQL / RLS, GenAI &amp; Gemini API</p>',
+  certs: '<p class="term-res"><strong>1.</strong> Innovation Ambassador (MoE &amp; AICTE, 2025-26)<br><strong>2.</strong> Network Security Engineer &amp; Endpoint Analyst (Skill India / NASSCOM)<br><strong>3.</strong> Digital Forensics &amp; Ethical Hacking (ICC / EC-Council)</p>',
+  projects: '<p class="term-res">1. e-Nyayalaya (SIH 2026 Flagship)<br>2. Maa Gayatri Bal Vidya Mandir (Live Client Portal)<br>3. Website Vulnerability Scanner (Python)<br>4. SehatSaathi (SIH AI Healthcare)<br>5. RudraX (AI Voice Assistant)</p>',
+  contact: '<p class="term-res">Email: narendrakumarvk2017@gmail.com<br>LinkedIn: linkedin.com/in/narendra-kumar-083ba8314<br>GitHub: github.com/TheGhostHacker-Ai</p>',
+  help: '<p class="term-res">Available commands: <span class="term-accent">whoami</span>, <span class="term-accent">flagship</span>, <span class="term-accent">skills</span>, <span class="term-accent">certs</span>, <span class="term-accent">projects</span>, <span class="term-accent">contact</span>, <span class="term-accent">clear</span></p>'
+};
+
+function executeCommand(rawCmd) {
+  if (!terminalOutput) return;
+  const cmd = rawCmd.trim().toLowerCase();
+  if (!cmd) return;
+
+  if (cmd === 'clear') {
+    terminalOutput.innerHTML = '';
+    return;
+  }
+
+  const outputItem = document.createElement('div');
+  outputItem.style.marginBottom = '8px';
+  outputItem.innerHTML = `<p><span class="prompt-sym">&gt;</span> <strong class="term-accent">${cmd}</strong></p>` + 
+    (COMMANDS[cmd] || `<p class="term-res" style="color:#ef4444;">Command not recognized: '${cmd}'. Type <span class="term-accent">'help'</span> for list.</p>`);
+  
+  terminalOutput.appendChild(outputItem);
+  terminalOutput.scrollTop = terminalOutput.scrollHeight;
+}
+
+termChips.forEach((chip) => {
+  chip.addEventListener('click', () => {
+    const cmd = chip.getAttribute('data-cmd');
+    if (cmd) executeCommand(cmd);
+  });
+});
+
+if (terminalForm && terminalInput) {
+  terminalForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const val = terminalInput.value;
+    terminalInput.value = '';
+    executeCommand(val);
+  });
+}
+
+// ============================================================
+// SCROLL READING PROGRESS & BACK TO TOP
+// ============================================================
+const progressBar = document.getElementById('scroll-progress-bar');
+const backToTopBtn = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  if (progressBar) progressBar.style.width = `${progress}%`;
+
+  if (backToTopBtn) {
+    backToTopBtn.classList.toggle('visible', scrollTop > 350);
+  }
+}, { passive: true });
+
+// ============================================================
+// PROJECT CATEGORY FILTER
+// ============================================================
+const filterTabs = document.querySelectorAll('.filter-tab');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    filterTabs.forEach((t) => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    const filter = tab.getAttribute('data-filter') || 'all';
+
+    projectCards.forEach((card) => {
+      const categories = (card.getAttribute('data-category') || '').split(' ');
+      if (filter === 'all' || categories.includes(filter)) {
+        card.classList.remove('is-hidden');
+      } else {
+        card.classList.add('is-hidden');
+      }
+    });
+  });
+});
+
+// ============================================================
+// 1-CLICK COPY EMAIL WITH TOAST
+// ============================================================
+const toast = document.getElementById('toast-notification');
+let toastTimeout = null;
+
+function showToast(msg) {
+  if (!toast) return;
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2400);
+}
+
+document.querySelectorAll('.copy-email-btn').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const email = btn.getAttribute('data-copy') || 'narendrakumarvk2017@gmail.com';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(() => {
+        showToast(`✓ Copied ${email} to clipboard!`);
+      }).catch(() => {
+        showToast(`Email: ${email}`);
+      });
+    } else {
+      showToast(`Email: ${email}`);
+    }
+  });
+});
