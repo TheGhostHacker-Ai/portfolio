@@ -50,10 +50,11 @@ if ('IntersectionObserver' in window && sections.length > 0) {
 // ============================================================
 const typingElement = document.getElementById('typing-text');
 const phrases = [
-  'Cybersecurity & AI Enthusiast | BTech CSE',
-  'Digital Forensics & Cryptographic Security',
+  'Cybersecurity, AI & IT Support | BTech CSE',
   'Chief Architect @ e-Nyayalaya (SIH 2026)',
-  'Full-Stack Developer & Vulnerability Analyst'
+  'Digital Forensics & Endpoint Security',
+  'PC Hardware & Network Troubleshooting',
+  'Web Development & Generative AI Systems'
 ];
 
 let phraseIndex = 0;
@@ -117,6 +118,24 @@ const PROJECTS_DATA = {
     complianceDesc: 'Fully compliant with the Bharatiya Nagarik Suraksha Sanhita (BNSS 2023), Bharatiya Sakshya Adhiniyam (BSA 2023), Aadhaar Act 2016, and Supreme Court e-Courts Phase III / ICJS architecture.',
     repoUrl: 'https://github.com/TheGhostHacker-Ai/e-Nyayalaya',
     demoUrl: 'https://e-nyayalaya.netlify.app/'
+  },
+  maagayatri: {
+    title: 'Official School Website — Maa Gayatri Bal Vidya Mandir, Malauli',
+    overview: 'A full-featured, responsive web platform engineered and deployed for a recognized educational institution (Classes 1–8) in Malauli, Barabanki, serving students, parents, and administration.',
+    objective: 'Built to establish an accessible digital identity, streamline public notice distribution, improve admissions visibility, and give school administrators an intuitive content management interface without requiring technical coding skills.',
+    approach: 'Developed a high-performance, mobile-responsive frontend featuring full SEO optimization and OpenGraph metadata for rich social previews. Integrated a Supabase-backed administrative panel allowing authenticated staff to publish announcements, manage event photo galleries, and update daily activities.',
+    features: [
+      'Deployed live at maagayatribalvidyamandir.in with custom domain DNS and SSL',
+      'Supabase PostgreSQL-backed administrative panel for dynamic content updates',
+      'Media upload pipeline for event photos and daily activity notices',
+      'Full SEO metadata architecture with OpenGraph and social card integration',
+      'High-speed, responsive layout tested across mobile, tablet, and desktop viewports'
+    ],
+    technologies: 'HTML5, CSS3, JavaScript, Supabase, PostgreSQL, Netlify Cloud, SEO Optimization',
+    complianceTitle: 'Client & Deployment Details',
+    complianceDesc: 'Live official client project serving the school community in Malauli, Barabanki, UP.',
+    repoUrl: null,
+    demoUrl: 'https://maagayatribalvidyamandir.in'
   },
   sehatsaathi: {
     title: 'SehatSaathi — AI-Enabled Healthcare Platform',

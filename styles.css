@@ -669,6 +669,93 @@ h1, h2, h3, h4 {
   font-size: 0.825rem;
 }
 
+/* Education Cards & Side Panel */
+.about-side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.side-panel-title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.edu-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  backdrop-filter: blur(12px);
+  transition: all 0.25s var(--ease);
+}
+
+.edu-card:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.edu-year {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--green-accent);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.edu-degree {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+
+.edu-inst {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.edu-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.edu-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: var(--green-tint);
+  border: 1px solid rgba(0, 255, 157, 0.3);
+  color: var(--green-accent);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.edu-loc {
+  font-size: 0.75rem;
+  color: var(--text-faint);
+}
+
+.cert-featured {
+  border-color: rgba(0, 255, 157, 0.3);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(13, 35, 30, 0.75) 100%);
+}
+
 /* ============================================================
    3. PROJECTS SECTION & GLASSMORPHISM CARDS
    ============================================================ */
